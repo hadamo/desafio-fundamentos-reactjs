@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
 				(transaction: Transaction) => ({
 					...transaction,
 					formattedValue: formatValue(transaction.value),
-					formattedDate: transaction.created_at,
+					formattedDate: formatDate(new Date(transaction.created_at)),
 				}),
 			);
 
